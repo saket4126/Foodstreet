@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Enrollment - FoodStreet</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#ff9a44,#fc6076);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:750px;
+}
+
+.form-box{
+    background:#fff;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0px 10px 25px rgba(0,0,0,0.2);
+}
+
+.form-box h1{
+    text-align:center;
+    color:#ff6600;
+    margin-bottom:10px;
+}
+
+.form-box p{
+    text-align:center;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.input-group{
+    margin-bottom:18px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+    color:#333;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus{
+    outline:none;
+    border-color:#ff6600;
+}
+
+.btn{
+    width:100%;
+    padding:14px;
+    background:#ff6600;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#e65c00;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="form-box">
+
+        <h1>🍽 Join FoodStreet</h1>
+
+        <p>
+            Register your restaurant and start receiving online orders
+            from thousands of customers.
+        </p>
+
+        <form action="/restaurant-enroll" method="POST">
+
+            <div class="input-group">
+                <label>Restaurant Name</label>
+                <input
+                    type="text"
+                    name="restaurant_name"
+                    placeholder="Enter Restaurant Name"
+                    required>
+            </div>
+
+            <div class="input-group">
+                <label>Owner Name</label>
+                <input
+                    type="text"
+                    name="owner_name"
+                    placeholder="Enter Owner Name"
+                    required>
+            </div>
+
+            <div class="input-group">
+                <label>Email Address</label>
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter Email Address"
+                    required>
+            </div>
+
+            <div class="input-group">
+                <label>Phone Number</label>
+                <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Enter Mobile Number"
+                    required>
+            </div>
+
+            <div class="input-group">
+                <label>Restaurant Address</label>
+                <textarea
+                    name="address"
+                    rows="3"
+                    placeholder="Enter Restaurant Address"
+                    required></textarea>
+            </div>
+
+            <div class="input-group">
+                <label>Cuisine Type</label>
+
+                <select name="cuisine">
+
+                    <option value="Indian">Indian</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="Italian">Italian</option>
+                    <option value="Fast Food">Fast Food</option>
+                    <option value="South Indian">South Indian</option>
+                    <option value="North Indian">North Indian</option>
+                    <option value="Multi Cuisine">Multi Cuisine</option>
+
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Restaurant Description</label>
+
+                <textarea
+                    name="description"
+                    rows="4"
+                    placeholder="Tell us about your restaurant"></textarea>
+            </div>
+
+            <button type="submit" class="btn">
+                Submit Enrollment Request
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
