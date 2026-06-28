@@ -11,3 +11,12 @@ def add_restaurant_request(data):
 
     cursor.execute(sql, data)
     db.commit()
+def add_user(data):
+    sql = """
+    INSERT INTO users
+    (name, email, mobile, password)
+    VALUES (%s,%s,%s,%s)
+    """
+
+    cursor.execute(sql, data)
+    db.commit()
